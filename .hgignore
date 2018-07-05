@@ -8,3 +8,5 @@ NatProject.userprefs
 ^build/
 Assets/Plugins/UnityPlugin.bundle
 Assets/Plugins/UnityPlugin.bundle.meta
+Assets/Plugins/UnityPlugin.dll
+Assets/Plugins/UnityPlugin.dll.meta
