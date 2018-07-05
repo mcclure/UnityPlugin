@@ -2,8 +2,8 @@
 ^Temp/
 ^obj/
 Assembly-CSharp.csproj
-RayProject.sln
-RayProject.userprefs
+NatProject.sln
+NatProject.userprefs
 ^.vscode/
 ^build/
 Assets/libUnityPlugin.dylib
