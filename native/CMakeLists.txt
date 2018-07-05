@@ -1,8 +1,14 @@
+# CMake file for Unity plugin
+
 cmake_minimum_required(VERSION 3.0.0)
 project(UnityPlugin)
 
+# Settings
+
 set(UNITY_PLUGIN_HEADERS )
-set(CMAKE_INSTALL_LIBDIR ${CMAKE_CURRENT_SOURCE_DIR}/../Assets)
+set(CMAKE_INSTALL_LIBDIR ${CMAKE_CURRENT_SOURCE_DIR}/../Assets/Plugins)
+
+# Parse UNITY_PLUGIN_HEADERS setting, or print an error if it has not been set
 
 if (UNITY_PLUGIN_HEADERS)
 
@@ -14,11 +20,23 @@ else(UNITY_PLUGIN_HEADERS)
 
 endif(UNITY_PLUGIN_HEADERS) 
 
-add_library(UnityPlugin SHARED
+# Build library
+
+add_library(UnityPlugin MODULE
 	main.cpp
 )
 
-install(TARGETS UnityPlugin
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-)
+# On OS X, CMake will want to name the library "libUnityPlugin.so", but Unity requires it to be "UnityPlugin.bundle"
 
+if (UNIX AND APPLE) # TODO: iPhone
+	set_target_properties(UnityPlugin PROPERTIES
+		PREFIX ""
+		SUFFIX ".bundle"
+	)
+endif(UNIX AND APPLE)
+
+# Install library
+
+install(TARGETS UnityPlugin
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} RENAME ${UNITY_PLUGIN_NAME}
+)

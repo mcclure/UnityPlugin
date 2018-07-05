@@ -6,5 +6,5 @@ NatProject.sln
 NatProject.userprefs
 ^.vscode/
 ^build/
-Assets/libUnityPlugin.dylib
-Assets/libUnityPlugin.dylib.meta
+Assets/Plugins/UnityPlugin.bundle
+Assets/Plugins/UnityPlugin.bundle.meta
