@@ -4,6 +4,8 @@ To use this you must install [CMake](https://cmake.org/) to compile the C parts.
 
 This repo was created by Andi McClure <<andi.m.mcclure@gmail.com>>. You can take the contents as being under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/) or being in the Public Domain.
 
+For more information about how Unity native plugins work, see the official documentation [here](https://docs.unity3d.com/Manual/Plugins.html).
+
 # Building
 
 Build the C plugin before you open the Unity project.
