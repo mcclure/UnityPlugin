@@ -1,8 +1,8 @@
-This is a simple sample project for a Unity project which incorporates C code. This repo uses "Mercurial", which is a git alternative, but you can download a zip from BitBucket by clicking the "downloads" button.
+This is a proof-of-concept project for a Unity project which incorporates [LOVR](https://lovr.org/). It originally incorporated files from a propreitary game project, which have been removed, which may mean this does not work out of the box. It is posted here for Public Interest.
 
 To use this you must install [CMake](https://cmake.org/) to compile the C parts.
 
-This repo was created by Andi McClure <<andi.m.mcclure@gmail.com>>. You can take the contents as being under [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/) or being in the Public Domain.
+This repo was created by Andi McClure <<andi.m.mcclure@gmail.com>> sometime in 2018 incorporating parts of LOVR 0.9.1. The license and provenance information from LOVR were not retained. You can take this repo as being under the [MIT license](https://opensource.org/licenses/MIT) as long as you also follow the license requirements of LOVR.
 
 For more information about how Unity native plugins work, see the official documentation [here](https://docs.unity3d.com/Manual/Plugins.html).
 
@@ -33,7 +33,7 @@ If you are not using 2017.4.6f1, you will need to replace "/Applications/Unity/H
 
 # Editing
 
-Once you have built the C plugin once, you can open the project in Unity and run the "Test" scene. If it is working it will print "Plugin test function returns: 3".
+Once you have built the C plugin once, you can open the project in Unity and run the "Test" scene. It is supposed to run the file game/main.lua.
 
 The C code is in "native/main.cpp". Every time you change it, you will need to re-run `cmake --build . --target install` from the "build" directory, then **quit and re-open** Unity. You do not need to re-run the other steps.
 

@@ -8,3 +8,6 @@ cmake.exe --build . --target install
 mkdir -p build && cd build
 cmake ../native -DUNITY_PLUGIN_HEADERS=/Applications/Unity/Hub/Editor/2017.4.6f1/Unity.app/Contents/PluginAPI
 cmake --build . --target install
+
+# If boot.lua changes
+(cd native/lovr/resources && xxd -i boot.lua > boot.lua.h)
